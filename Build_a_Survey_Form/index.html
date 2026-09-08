@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Customer Feedback Survey — a freeCodeCamp responsive web design project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1 id="title">Customer Feedback Survey</h1>
+      <p id="description">Thank you for taking the time to help us improve our products</p>
+    </header>
+
+    <div class="form-container">
+      <form id="survey-form">
+
+        <fieldset class="personal-info">
+          <legend>Personal Information</legend>
+
+          <label id="name-label" for="name">Name:</label>
+          <input id="name" type="text" name="name" placeholder="Ex. John Deere" required size="20">
+
+          <label id="email-label" for="email">Email:</label>
+          <input id="email" type="email" name="email" placeholder="example@email.com" required size="20">
+
+          <label id="number-label" for="number">Age</label>
+          <input id="number" name="age" type="number" min="16" max="99" placeholder="Age" required size="20">
+        </fieldset>
+
+        <fieldset class="product-info">
+          <legend>Which of the following products have you used?</legend>
+          <select id="dropdown" name="products" required>
+            <option disabled selected value>products</option>
+            <option value="product-1">product 1</option>
+            <option value="product-2">product 2</option>
+            <option value="product-3">product 3</option>
+            <option value="product-4">product 4</option>
+            <option value="product-5">product 5</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="usage-frequency">
+          <legend>How often have you used our products in the last year?</legend>
+          <label>
+            <input name="used" value="Daily" type="radio" checked>Daily</label>
+
+          <label>
+            <input name="used" value="Once-a-week" type="radio">Once a week</label>
+
+          <label>
+            <input name="used" value="Once-a-month" type="radio">Once a month</label>
+
+          <label>
+            <input name="used" value="2-3-times-a-year" type="radio">2-3 times a year</label>
+        </fieldset>
+
+        <fieldset class="discovery-method">
+          <legend>How did you find out about our company's products?</legend>
+
+          <label>
+            <input name="prefer" value="TV" type="checkbox">TV</label>
+
+          <label>
+            <input name="prefer" value="Radio" type="checkbox">Radio</label>
+
+          <label>
+            <input name="prefer" value="Newspaper" type="checkbox">Newspaper</label>
+
+          <label>
+            <input name="prefer" value="Company's-own-website" type="checkbox">Company's own website</label>
+
+          <label>
+            <input name="prefer" value="Social-networks" type="checkbox">Social networks</label>
+        </fieldset>
+
+        <fieldset class="improvement-suggestions">
+          <legend>How can our company improve its products?</legend>
+          <textarea id="comments" class="input-textarea" name="comment"
+            placeholder="Enter your comment here..."></textarea>
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </fieldset>
+
+      </form>
+      <p id="thank-you" class="thank-you" hidden>Thank you! Your feedback has been recorded.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
