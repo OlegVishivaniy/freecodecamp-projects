@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A technical documentation page about the HTTP protocol — a freeCodeCamp project.">
+    <title>HTTP Documentation Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-doc">Skip to content</a>
+
+    <nav id="navbar">
+      <header><h1>HTTP Documentation Page</h1></header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Reference_documentation">Reference documentation</a></li>
+        <li><a class="nav-link" href="#HTTP_guides">HTTP guides</a></li>
+        <li><a class="nav-link" href="#Security_and_privacy">Security and privacy</a></li>
+        <li><a class="nav-link" href="#Related_resources">Related resources</a></li>
+        <li><a class="nav-link" href="#Tools_and_resources">Tools &amp; resources</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header><h2>Introduction</h2></header>
+        <article>
+          <p>Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes, such as machine-to-machine communication, programmatic access to APIs, and more.</p>
+          <p>HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response from the server. HTTP is a stateless protocol, meaning that the server does not keep any session data between two requests, although the later addition of cookies adds state to some client-server interactions.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference_documentation">
+        <header><h2>Reference documentation</h2></header>
+        <article>
+          <p>The HTTP reference documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.</p>
+          <ul>
+            <li>HTTP headers. Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.</li>
+            <li>HTTP request methods. Request methods indicate the purpose of the request and what is expected if the request is successful. The most common methods are <code>GET</code> and <code>POST</code> for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.</li>
+            <li>HTTP response status codes. Response status codes indicate the outcome of a specific HTTP request. Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.</li>
+            <li>HTTP resources and specifications. This page lists relevant resources about HTTP since it was first specified in the early 1990s.</li>
+            <li>CSP directives. The <code>Content-Security-Policy</code> (CSP) response header allows website administrators to specify which resources the user agent is allowed to load for a given page. This section lists directives that can be used in a CSP header, with individual documentation pages that describe how the directives work and how to use them.</li>
+            <li>Permissions-Policy directives. The <code>Permissions-Policy</code> response header provides a mechanism to allow or deny the use of browser features in a document or within any <code>iframe</code> element in the document. This section lists directives that can be used in a Permissions-Policy header, with individual documentation pages that describe how the directives work and how to use them.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="HTTP_guides">
+        <header><h2>HTTP guides</h2></header>
+        <article>
+          <p>HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a basic message structure, and client-server communication model. On top of these concepts, numerous extensions have been developed over the years that add functionality and updated semantics, including additional HTTP methods and headers.</p>
+          <p>The guides below are listed in order from general overviews to specialized, use-case-driven topics. Beginners are encouraged to start with the foundational guides before exploring more focused articles.</p>
+          <ul>
+            <li>Overview of HTTP. The basic features of HTTP, what it can do, its intended use in web architecture, and its position in the protocol stack.</li>
+            <li>Evolution of HTTP. HTTP was created in the early 1990s and has been extended several times. This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.</li>
+            <li>A typical HTTP session. Describes the flow of an HTTP session, from establishing a connection, sending a request, to receiving a response.</li>
+            <li>HTTP messages. HTTP messages transmitted as requests and responses have a defined structure. This article describes this general structure, its purpose, and the different types of messages.</li>
+            <li>MIME types. Since HTTP/1.0, different types of content can be transmitted. This article explains how this is accomplished using the <code>Content-Type</code> header and the MIME standard. A shortlist of common types used by web developers can be found in Common MIME types.</li>
+            <li>Compression in HTTP. Browsers and servers compress their messages before sending them over the network to reduce the amount of data that needs to be transmitted, improving transfer speed and bandwidth utilization.</li>
+            <li>HTTP caching. Caching is a highly important mechanism for delivering fast experiences on the Web and for efficient use of resources. This article describes different methods of caching and how to use HTTP headers to control them.</li>
+            <li>HTTP authentication. Authentication is a way to verify the identity of a client when making requests to a server. It ensures that only authorized users or systems can access certain resources.</li>
+            <li>Using HTTP cookies. Although HTTP is a stateless protocol, a server can send a <code>Set-Cookie</code> header with the response. The client then returns the cookie's value with every subsequent request to the server in the form of a <code>Cookie</code> request header. This adds the ability to store and exchange a small amount of data which effectively adds state to some client-server interactions.</li>
+            <li>Redirections in HTTP. URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, a whole website, or a web application. HTTP has a special kind of response, called a HTTP redirect, for this operation.</li>
+            <li>HTTP conditional requests. In conditional requests, the outcome of a request depends on the value of a validator in the request. This method is used heavily in caching and use cases such as resuming a download, preventing lost updates when modifying a document on the server, and more.</li>
+            <li>HTTP range requests. A range request asks the server to send a specific part (or parts) of a resource back to a client instead of the full resource. Range requests are useful for cases when a client knows they need only part of a large file, or for cases where an application allows the user to pause and resume a download.</li>
+            <li>Content negotiation. HTTP defines a set of message headers, starting with <code>Accept</code> as a way for a browser to announce the format, language, or encoding it prefers. This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.</li>
+            <li>Connection management in HTTP/1.x. HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining. This article explains both concepts, including the pros and cons of each.</li>
+            <li>Protocol upgrade mechanism. HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the <code>Upgrade</code> header. A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a WebSocket <code>(ws / wss)</code>.</li>
+            <li>Proxy servers and tunneling. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.</li>
+            <li>HTTP Client hints. Client Hints are a set of response headers that a server can use to proactively request information from a client about the device, network, user, and user-agent-specific preferences. The server can then determine which resources to send, based on the information that the client chooses to provide.</li>
+            <li>Network Error Logging Experimental. Network Error Logging is a mechanism that can be configured via the NEL HTTP response header. This experimental header allows websites and applications to opt-in to receive reports about failed (or even successful) network fetches from supporting browsers.</li>
+            <li>Browser detection using the user agent. It's very rarely a good idea to use user agent sniffing to detect a browser, but there are edge cases that require it. This document will guide you in doing this as correctly as possible when this is necessary, with an emphasis on considerations to make before embarking on this route.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Security_and_privacy">
+        <header><h2>Security and privacy</h2></header>
+        <article>
+          <p>Permissions Policy provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features.</p>
+          <p>Cross-site HTTP requests are requests for resources from a different domain than that of the resource making the request. Web pages today very commonly load cross-site resources, for example, a page 'Domain A' <code>(http://domaina.example/)</code> requests an image on 'Domain B' <code>(http://domainb.foo/image.jpg)</code> via the <code>img</code> element. CORS allows web developers to control how their site reacts to cross-site requests.</p>
+          <p>CSP allows website administrators to use the <code>Content-Security-Policy</code> response header to control which resources the client is allowed to load for a given page. The CSP guide describes the overall Content Security Policy mechanism which helps detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.</p>
+          <p>CORP lets websites and applications opt in to protection against specific requests from other origins (such as those issued with elements like <code>script</code> and <code>img</code>), to mitigate speculative side-channel attacks.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Related_resources">
+        <header><h2>Related resources</h2></header>
+        <article>
+          <p>Uniform Resource Identifiers (URIs) are used to describe and locate resources on the web and are an essential component in HTTP requests.</p>
+          <p>This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files. This information may also be useful if you encounter other media types your server isn't already configured to recognize.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Tools_and_resources">
+        <header><h2>Tools &amp; resources</h2></header>
+        <article>
+          <p>Helpful tools and resources for understanding and debugging HTTP.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/observatory" target="_blank" rel="noopener noreferrer">HTTP Observatory</a> — a project designed to help developers, system administrators, and security professionals configure their sites safely and securely.</li>
+            <li><a href="https://redbot.org/" target="_blank" rel="noopener noreferrer">RedBot</a> — tools to check your cache-related headers.</li>
+            <li><a href="https://web.dev/articles/howbrowserswork" target="_blank" rel="noopener noreferrer">How Browsers Work (2011)</a> — a very comprehensive article on browser internals and request flow through HTTP protocol.</li>
+            <li><a href="https://github.com/curl/curl" target="_blank" rel="noopener noreferrer">curl</a> — a command-line tool for transferring data specified with URL syntax. Supports HTTP, HTTPS, WS, WSS, among many other protocols.</li>
+            <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank" rel="noopener noreferrer">MDN</a>.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
